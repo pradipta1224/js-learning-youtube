@@ -1,9 +1,9 @@
-//Objects declared by constructor
+// Objects declared by constructor
 // const tinderUser = {} //Non Singleton Object means literal
-// const tinderUser  = new Object() //Singleton Object
-// tinderUser.id = "123abc"
-// tinderUser.name = "Pradipta"
-// tinderUser.isLoggedIn = false
+const tinderUser  = new Object() //Singleton Object
+tinderUser.id = "123abc"
+tinderUser.name = "Pradipta"
+tinderUser.isLoggedIn = false
 // console.log(tinderUser)
 
 const regularUser = {
@@ -31,3 +31,28 @@ const obj2 = {
 //We will still use assign very less, instead we will use spread operator
 const obj3 = {...obj1, ...obj2}
 console.log(obj3)
+
+const users = [ 
+    {
+        id: 1,
+        email: "pradipta@gmail.com"
+    },
+    {
+        id: 1,
+        email: "pradipta@gmail.com"
+    },
+    {
+        id: 1,
+        email: "pradipta@gmail.com"
+    },
+]
+users[1].email
+console.log(tinderUser)
+console.log(Object.keys(tinderUser)) //Important
+console.log(Object.values(tinderUser))
+console.log(Object.entries(tinderUser))
+console.log(tinderUser.hasOwnProperty('isLoggedIn')) //Returns an output value if a particular property of an object is present or not
+
+
+const {id} = tinderUser //This is another way to target the key of an object and then we can console.log more conveniently
+console.log(id)
