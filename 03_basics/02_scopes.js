@@ -17,3 +17,45 @@ console.log(c) //But when we comment out a and b console.logs then we can see th
 //Global scope is different in the browser console vs the code envinronment
 
 
+function one(){
+    const username = "Pradipta"
+
+    function two(){
+        const website = "youtube"
+        console.log(username)
+    }
+    // console.log(website)
+    two()
+}
+
+// one()
+
+if(true){
+    const username = "Pradipta"
+    if(username === "Pradipta"){
+        const website = " youtube"
+        // console.log(username + website)
+    }
+    // console.log(website)
+}
+
+// console.log(username)
+
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++ interesting +++++++++++++++++++++++++++++++++++++\
+
+
+
+console.log(addone(5)) //Doesn't throw an error
+function addone(num){
+    return num + 1
+}
+
+
+
+addTwo(5) //But it throws an error saying cannot access before initialization, that's when the style of declaration comes in , here we store the function in a variable that's why it throws the error coz a variable should always be declared before accessing
+const addTwo = function(num){  //This is also a function but it's also called expression because it's stored in a variable
+    return num+2
+}
