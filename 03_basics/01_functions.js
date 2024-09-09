@@ -29,3 +29,33 @@ function loginUserMessage(username){
     return `${username} just logged in`  //Important
 }
 console.log(loginUserMessage("Pradipta")) //When you don't pass anything as an argument then it returns undefined 
+
+function calculateCartPrice(...num1){
+    return num1
+}
+
+// console.log(calculateCartPrice(20, 400, 300))
+
+const user = {
+    username: "Pradipta",
+    prices: 199
+}
+
+function handleObject(anyobject){  //anyobject is used to import and use any object and not just any single specific
+   console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`)
+}
+// handleObject(user)
+
+handleObject({
+    username: "Pradipta1",
+    price: 399
+})
+
+const myNewArray = [200,400,600,800]
+
+const myOldArray = [2,3,4,5]
+
+function returnSecondValue(getArray){
+    return getArray[0]
+}
+console.log(returnSecondValue(myOldArray))
